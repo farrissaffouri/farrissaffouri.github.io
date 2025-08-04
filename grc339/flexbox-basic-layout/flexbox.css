@@ -1,0 +1,90 @@
+/* CSS DOCUMENT */
+
+body {
+	font-family: sans-serif;
+	line-height: 1.4em;
+	color: #222;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  div.container {
+	max-width: 60em;
+	margin: auto;
+	padding: 1em;
+  }
+  
+  img {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  header,
+  footer,
+  article,
+  aside {
+	width: 100%;
+  }
+  
+  article,
+  aside {
+	padding: 1em;
+  }
+  
+  article p {
+	max-width: 45em;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  aside section {
+	background-color: #f0f0f0;
+	padding: 1em;
+	margin-bottom: 1.5em;
+	border-radius: 4px;
+  }
+  
+  aside h3 {
+	margin-top: 0.5em;
+	margin-bottom: 0.25em;
+	font-size: 1.1em;
+  }
+
+  footer {
+	border-top: 1px solid #ccc;
+	padding-top: 1em;
+	margin-top: 2em;
+  }
+  
+  @media (min-width: 800px) {
+	div.container {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	}
+  
+	header,
+	footer {
+	  flex: 1 0 100%;
+	}
+  
+	article {
+	  flex: 2 1 60%;
+	  min-width: 20em;
+	}
+  
+	aside {
+	  flex: 1 1 30%;
+	  min-width: 15em;
+	}
+  }
+
+  
