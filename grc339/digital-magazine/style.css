@@ -1,0 +1,125 @@
+/* CSS document */
+
+/* reset from your starter */
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0; padding:0; border:0; font-size:100%; font:inherit;}
+
+:root{
+  --ink:#111;
+  --muted:#6e6e6e;
+  --blue:#2d5f86;         /* matches the screenshot’s link/headline blue */
+  --paper:#ffffff;
+  --ui:#f0f0f0;
+}
+
+*{box-sizing:border-box;}
+img{width:100%; display:block;}
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color:var(--ink);
+  background:#ddd;
+}
+
+.container{
+  background:var(--paper);
+  max-width: 60rem;
+  margin:0 auto;
+  padding:0 1rem 2rem 1rem;
+}
+
+/* HEADER */
+.site-head{padding:1rem 0 0.5rem 0;}
+.logo{display:inline-block;}
+.logo img{width:11rem; height:auto;}
+
+/* vertical nav under the logo (blue, big, stacked) */
+.sections ul{list-style:none; margin-top:0.75rem;}
+.sections li + li{margin-top:0.25rem;}
+.sections a{
+  display:inline-block;
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:700;
+  font-size:1.35rem;
+}
+
+/* MAIN STORY */
+main{padding-bottom:2rem;}
+.block{display:block; text-decoration:none; color:inherit;}
+
+.mainstory .hero{margin:0;}
+.mainstory .lede{
+  background:var(--paper);
+  padding:1rem;
+  border-top:0.35rem solid var(--blue);
+  margin:0 0 1rem 0;
+}
+
+.mainstory h2{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:2.4rem;            /* big, heavy headline like the screenshot */
+  line-height:1.05;
+  color:var(--blue);
+  font-weight:800;
+  letter-spacing:.01em;
+  margin:0 0 .5rem 0;
+}
+
+main p{
+  font-size:1.125rem;          /* keep user’s filler readable */
+  line-height:1.6;
+  color:#1a1a1a;
+}
+
+/* the large follow-up image directly after the card */
+.follow-image{margin:0;}
+.follow-image figure{margin:0;}
+
+/* generic teaser tiles further down the page */
+.teaser{margin:1rem 0;}
+.teaser h3{
+  color:var(--blue);
+  font-weight:800;
+  font-size:1.35rem;
+  margin:.5rem 0 .25rem 0;
+}
+.teaser p{
+  color:var(--muted);
+  font-size:1rem;
+}
+
+/* STORY PAGE */
+.story{padding-bottom:2rem;}
+.story .hero{margin:0 0 .5rem 0;}
+.story-title{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color:var(--blue);
+  font-weight:800;
+  font-size:2.2rem;
+  line-height:1.1;
+  margin:0 0 .5rem 0;
+}
+.story figure{margin:1rem 0;}
+.story figcaption{
+  color:#666;
+  font-size:.95rem;
+  margin-top:.35rem;
+}
+
+/* simple right rail that drops under on phones—no flex/grid/float, just width and auto margins */
+.rail{padding-top:1rem;}
+.rail .teaser.small h3{font-size:1.15rem}
+
+/* FOOTER */
+.site-foot{
+  border-top:2px solid #e5e5e5;
+  margin-top:2rem;
+  padding-top:1rem;
+}
+.site-foot p{color:#666; font-size:.95rem}
+
+/* WIDE TWEAKS (still not using grid/flex for layout; just space/size tweaks) */
+@media (min-width:46rem){
+  .logo img{width:12rem}
+  .mainstory h2{font-size:2.8rem}
+}

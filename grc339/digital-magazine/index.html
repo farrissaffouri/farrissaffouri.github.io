@@ -1,14 +1,101 @@
-<!doctype html>  
-<html lang="en">  
-    <head>  
-        <meta charset="UTF-8" />  
-        <meta name="viewport" content="width=device-width, initial-scale=1" />  
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />  
-        <meta http-equiv="Pragma" content="no-cache" />  
-        <meta http-equiv="Expires" content="0" />  
-        <title>GRC 339: Digital Magazine</title>  
-    </head>   
-    <body>  
-        <h1>Digital Magazine</h1>  
-    </body>  
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your name goes here.</title>
+
+    <!-- one css for both pages -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- cache-busting (from the starter) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+  <body>
+    <div class="container">
+
+      <header class="site-head">
+        <a class="logo" href="index.html">
+          <img src="logo.svg" alt="Cool Logo.">
+        </a>
+
+        <nav class="sections">
+          <ul>
+            <li><a href="#">Style</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Wellbeing</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Opinion</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+
+        <!-- HERO + LEDE CARD (matches the screenshot proportions) -->
+        <section class="mainstory">
+          <a class="block" href="mainstory.html">
+            <figure class="hero">
+              <img src="soccer-1.jpg" alt="">
+            </figure>
+
+            <div class="lede">
+              <h2>Story about soccer</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </a>
+        </section>
+
+        <!-- the next large image shown right after the card in the PDF -->
+        <section class="follow-image">
+          <figure>
+            <img src="dance-1.jpg" alt="">
+          </figure>
+        </section>
+
+        <!-- a few more teasers so the page has depth (they stay below fold on phones) -->
+        <section class="teaser">
+          <a class="block" href="#">
+            <figure><img src="coffee-1.jpg" alt=""></figure>
+            <h3>Story about coffee</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+          </a>
+        </section>
+
+        <section class="teaser">
+          <a class="block" href="#">
+            <figure><img src="trees-1.jpg" alt=""></figure>
+            <h3>Story about trees</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+          </a>
+        </section>
+
+        <section class="teaser">
+          <a class="block" href="#">
+            <figure><img src="guitars-1.jpg" alt=""></figure>
+            <h3>Story about guitars</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+          </a>
+        </section>
+
+        <section class="teaser">
+          <a class="block" href="#">
+            <figure><img src="cars-1.jpg" alt=""></figure>
+            <h3>Story about cars</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+          </a>
+        </section>
+
+      </main>
+
+      <footer class="site-foot">
+        <p>All rights reserved.</p>
+      </footer>
+
+    </div>
+  </body>
 </html>
