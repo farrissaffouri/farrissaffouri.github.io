@@ -3,25 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Your name goes here.</title>
-
-    <!-- one css for both pages -->
+    <title>Farris Saffouri — Digital Magazine</title>
     <link rel="stylesheet" href="style.css" />
-
-    <!-- cache-busting (from the starter) -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
   </head>
   <body>
-    <div class="container">
-
+    <div class="home container">
       <header class="site-head">
         <a class="logo" href="index.html">
-          <img src="logo.svg" alt="Cool Logo.">
+          <img src="logo.svg" alt="Magazine logo." />
         </a>
-
-        <nav class="sections">
+        <nav class="sections" aria-label="Primary">
           <ul>
             <li><a href="#">Style</a></li>
             <li><a href="#">Music</a></li>
@@ -33,69 +27,89 @@
       </header>
 
       <main>
+        <section class="secondary feature dance">
+          <a class="block" href="#">
+            <figure><img src="dance-1.jpg" alt="Dancer mid-performance." /></figure>
+            <h3>Story about dance</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </a>
+        </section>
 
-        <!-- HERO + LEDE CARD (matches the screenshot proportions) -->
         <section class="mainstory">
           <a class="block" href="mainstory.html">
             <figure class="hero">
-              <img src="soccer-1.jpg" alt="">
+              <img src="soccer-1.jpg" alt="Stadium during a soccer match." />
             </figure>
-
             <div class="lede">
               <h2>Story about soccer</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
           </a>
         </section>
 
-        <!-- the next large image shown right after the card in the PDF -->
-        <section class="follow-image">
-          <figure>
-            <img src="dance-1.jpg" alt="">
-          </figure>
-        </section>
-
-        <!-- a few more teasers so the page has depth (they stay below fold on phones) -->
-        <section class="teaser">
+        <section class="secondary coffee">
           <a class="block" href="#">
-            <figure><img src="coffee-1.jpg" alt=""></figure>
+            <figure><img src="coffee-1.jpg" alt="Cup of coffee on a table." /></figure>
             <h3>Story about coffee</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae augue et lorem pulvinar tristique sed non est.</p>
           </a>
         </section>
 
-        <section class="teaser">
+        <section class="secondary trees">
           <a class="block" href="#">
-            <figure><img src="trees-1.jpg" alt=""></figure>
+            <figure><img src="trees-1.jpg" alt="Trees in a forest." /></figure>
             <h3>Story about trees</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget lorem at metus efficitur fermentum.</p>
           </a>
         </section>
 
-        <section class="teaser">
+        <section class="secondary guitars">
           <a class="block" href="#">
-            <figure><img src="guitars-1.jpg" alt=""></figure>
+            <figure><img src="guitars-1.jpg" alt="Electric guitars on a wall." /></figure>
             <h3>Story about guitars</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus.</p>
           </a>
         </section>
 
-        <section class="teaser">
+        <section class="secondary cars">
           <a class="block" href="#">
-            <figure><img src="cars-1.jpg" alt=""></figure>
+            <figure><img src="cars-1.jpg" alt="Sports car close-up." /></figure>
             <h3>Story about cars</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Aenean euismod urna non elit.</p>
           </a>
         </section>
-
       </main>
+
+      <aside class="tertiary" aria-label="More stories">
+        <article class="rail-item">
+          <h4><a href="#">Story about writing</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article class="rail-item">
+          <h4><a href="#">Story about surfing</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article class="rail-item">
+          <h4><a href="#">Story about hiking</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article class="rail-item">
+          <h4><a href="#">Story about flowers</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article class="rail-item">
+          <h4><a href="#">Story about candles</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article class="rail-item">
+          <h4><a href="#">Story about astronomy</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+      </aside>
 
       <footer class="site-foot">
         <p>All rights reserved.</p>
       </footer>
-
     </div>
   </body>
 </html>
