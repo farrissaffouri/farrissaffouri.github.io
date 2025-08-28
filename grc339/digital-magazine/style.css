@@ -48,7 +48,8 @@ h1, h2, h3, h4, h5, h6{
   border-bottom:.35rem solid var(--gold);
 }
 .logo{display:inline-block;}
-.logo img{width:11rem; height:auto;}
+.logo img,
+.logo .wwlogo{width:11rem; height:auto; display:block;}
 
 .sections ul{
   list-style:none;
@@ -154,10 +155,11 @@ main p{
 }
 
 @media (min-width:46rem){
-  .logo img{width:12rem}
+  .logo img,
+  .logo .wwlogo{width:12rem}
   .sections ul{
     flex-direction:row;
-  align-items:center;
+    align-items:center;
     gap:1rem;
     margin-top:0;
   }
