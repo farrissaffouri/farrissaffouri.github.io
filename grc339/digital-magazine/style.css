@@ -67,11 +67,6 @@ h1, h2, h3, h4, h5, h6{
 main{padding-bottom:2rem;}
 .block{display:block; color:inherit;}
 
-.mainstory .hero,
-.story .hero{width:auto; margin-left:0; margin-right:0; transform:none;}
-.mainstory .hero img,
-.story .hero img{width:100%; height:auto;}
-
 main p{
   font-family:var(--font-body);
   font-size:1rem;
@@ -82,8 +77,6 @@ main p{
 .secondary{margin:1rem 0;}
 .secondary .block{display:flex; flex-direction:column; height:100%; min-height:0;}
 .secondary .block figure{display:flex; flex:0 0 12em;}
-.secondary .block h3,
-.secondary .block p{flex-shrink:0;}
 .secondary .block figure img{width:100%; height:100%; object-fit:cover;}
 .secondary .block h3{font-size:1.35rem; margin:.5rem 0 .25rem 0;}
 .secondary .block p{color:#6e6e6e; font-size:1rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
@@ -110,8 +103,10 @@ main p{
 .rail-item h4 a{color:var(--blue);}
 .rail-item p{font-size:1rem; color:#515a66; white-space:normal; overflow:visible; display:block;}
 
-/* Full-bleed figures on small screens (no negative margins) */
+/* Mobile: full-bleed figures (no margins) and correct transform */
 @media (max-width:45.999rem){
+  .mainstory .hero,
+  .story .hero,
   main .block figure,
   .story figure{
     width:100vw;
@@ -121,15 +116,18 @@ main p{
     left:50%;
     transform:translateX(-50%);
   }
+  .mainstory .hero img,
+  .story .hero img{width:100%; height:auto;}
 }
 
+/* Tablet and up: normal figures */
 @media (min-width:46rem){
   .logo img{width:12rem}
   .sections ul{flex-direction:row; align-items:center; gap:1rem; margin-top:0;}
   .mainstory .hero,
   .story .hero,
   main .block figure,
-  .story figure{width:auto; margin-left:0; margin-right:0; transform:none;}
+  .story figure{width:auto; margin-left:0; margin-right:0; transform:none; left:auto;}
 }
 
 @media (min-width:60em){
@@ -185,55 +183,21 @@ main p{
   .container:not(.home) > .rail{ grid-column:2 / 3; align-self:start; }
 }
 
-/* (Legacy grid gallery styles kept for compatibility if needed)
-.gallery{
-  display:grid;
-  gap:var(--gap);
-  grid-template-columns:1fr;
-}
-.gallery figure{overflow:hidden; border:2px solid var(--rule);}
-.gallery img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3;}
-.gallery figcaption{font-family:var(--font-ui); font-size:.95rem; color:#515a66; padding:.5rem;}
-@media (min-width:46rem){ .gallery{ grid-template-columns:repeat(2, 1fr);} }
-@media (min-width:60em){ .gallery{ grid-template-columns:repeat(3, 1fr);} }
-*/
+/* Photo gallery (radio/thumbnail) */
+.radio-gallery{display:block; margin-top:1rem;}
+.radio-gallery input[type="radio"]{position:absolute; inline-size:0; block-size:0; opacity:0;}
+.gallery-title{font-size:1.6rem; line-height:1.2; margin:0 0 .75rem 0;}
 
-/* ======================
-   RADIO GALLERY (8 slides)
-   ====================== */
-.radio-gallery{
-  display:block;
-  margin-top:1rem;
-}
-
-/* Accessible, visually hidden radios */
-.radio-gallery input[type="radio"]{
-  position:absolute;
-  inline-size:0;
-  block-size:0;
-  opacity:0;
-}
-
-/* Title */
-.gallery-title{
-  font-size:1.6rem;
-  line-height:1.2;
-  margin:0 0 .75rem 0;
-}
-
-/* Stage with fixed aspect; px only for borders */
 .rg-stage{
   position:relative;
   width:100%;
-  aspect-ratio:16 / 9;
+  aspect-ratio:16/9;
   margin-bottom:.8rem;
   border:2px solid var(--rule);
   overflow:hidden;
-  background:#000;
+  background:#000000;
   display:block;
 }
-
-/* Slides stacked, fade via opacity */
 .rg-stage figure{
   position:absolute;
   inset:0;
@@ -242,20 +206,15 @@ main p{
   display:grid;
   grid-template-rows:1fr auto;
 }
-.rg-stage img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+.rg-stage img{width:100%; height:100%; object-fit:cover;}
 .rg-stage figcaption{
   background:rgba(0,0,0,.6);
-  color:#fff;
+  color:#ffffff;
   padding:.6rem 1rem;
   font-family:var(--font-ui);
   font-size:1rem;
 }
 
-/* Map checked radios to slide index */
 #photo1:checked ~ .rg-stage figure:nth-of-type(1){opacity:1;}
 #photo2:checked ~ .rg-stage figure:nth-of-type(2){opacity:1;}
 #photo3:checked ~ .rg-stage figure:nth-of-type(3){opacity:1;}
@@ -265,26 +224,13 @@ main p{
 #photo7:checked ~ .rg-stage figure:nth-of-type(7){opacity:1;}
 #photo8:checked ~ .rg-stage figure:nth-of-type(8){opacity:1;}
 
-/* Thumbnails: 4 equal columns, 0.2em gap; px only for borders */
 .rg-thumbs{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
   gap:.2em;
 }
-.rg-thumbs label{
-  cursor:pointer;
-  display:block;
-  border:2px solid var(--rule);
-}
-.rg-thumbs img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  aspect-ratio:4 / 3;
-  display:block;
-}
-
-/* Active thumb highlight */
+.rg-thumbs label{cursor:pointer; display:block; border:2px solid var(--rule);}
+.rg-thumbs img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3; display:block;}
 #photo1:checked ~ .rg-thumbs label[for="photo1"],
 #photo2:checked ~ .rg-thumbs label[for="photo2"],
 #photo3:checked ~ .rg-thumbs label[for="photo3"],
@@ -292,12 +238,9 @@ main p{
 #photo5:checked ~ .rg-thumbs label[for="photo5"],
 #photo6:checked ~ .rg-thumbs label[for="photo6"],
 #photo7:checked ~ .rg-thumbs label[for="photo7"],
-#photo8:checked ~ .rg-thumbs label[for="photo8"]{
-  border:2px solid var(--blue);
-}
+#photo8:checked ~ .rg-thumbs label[for="photo8"]{border:2px solid var(--blue);}
 
-/* Small screens tweaks */
 @media (max-width:45.999rem){
-  .gallery-title{ font-size:1.4rem; }
-  .rg-stage figcaption{ font-size:.95rem; }
+  .gallery-title{font-size:1.4rem;}
+  .rg-stage figcaption{font-size:.95rem;}
 }
