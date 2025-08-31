@@ -8,9 +8,6 @@
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/tgu4svn.css">
     <link rel="stylesheet" href="style.css" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
   </head>
   <body>
     <div class="container">
@@ -24,45 +21,51 @@
           <ul>
             <li><a href="index.html">News</a></li>
             <li><a href="#">Recaps</a></li>
-            <li><a href="#">Film Room</a></li>
+            <li><a href="photogallery.html">Film Room</a></li>
             <li><a href="#">Roster</a></li>
             <li><a href="#">Opinion</a></li>
           </ul>
         </nav>
       </header>
 
-      <main class="subscribe">
-        <figure class="subscribe-art">
-          <img src="warriors78.jpeg" alt="Stephen Curry lifting a Finals trophy through fans reaching out." />
+      <article class="story">
+        <figure class="hero">
+          <img src="warriors53.jpeg" alt="Guard in a blue jersey pointing after a made three." />
+          <figcaption>Weekly analysis, film hits, and roster notes—delivered Fridays.</figcaption>
         </figure>
 
-        <form class="subscribe-form" action="#" method="post">
-          <div class="stack">
-            <h2>Subscribe to Warriors Weekly</h2>
-            <p>One email each Friday with film notes, roster trends, and links worth your time.</p>
-          </div>
+        <h2 class="story-title">Subscribe to Warriors Weekly</h2>
+        <p>One email each Friday with film notes, roster trends, and links worth your time.</p>
 
-          <div class="row">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-            </div>
-          </div>
+        <form action="#" method="post" class="signup" aria-label="Newsletter signup">
+          <p>
+            <label for="name">Name</label><br />
+            <input id="name" name="name" type="text" autocomplete="name" />
+          </p>
+          <p>
+            <label for="email">Email</label><br />
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </p>
 
-          <fieldset class="stack">
+          <fieldset class="choices">
             <legend>Choose your newsletters</legend>
-            <label class="check"><input type="checkbox" name="editions" value="news" /> News &amp; Recaps</label>
-            <label class="check"><input type="checkbox" name="editions" value="film" /> Film Room</label>
-            <label class="check"><input type="checkbox" name="editions" value="cap" /> Cap &amp; Contracts</label>
+            <label>
+              <input type="checkbox" name="lists" value="news" />
+              <span>News &amp; Recaps</span>
+            </label>
+            <label>
+              <input type="checkbox" name="lists" value="film" />
+              <span>Film Room</span>
+            </label>
+            <label>
+              <input type="checkbox" name="lists" value="cap" />
+              <span>Cap &amp; Contracts</span>
+            </label>
           </fieldset>
 
-          <button class="button" type="submit">Subscribe</button>
+          <p><button type="submit">Subscribe</button></p>
         </form>
-      </main>
+      </article>
 
       <footer class="site-foot">
         <p>All rights reserved.</p>
