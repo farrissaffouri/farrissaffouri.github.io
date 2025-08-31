@@ -8,9 +8,6 @@
     <link rel="preconnect" href="https://use.typekit.net" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/tgu4svn.css">
     <link rel="stylesheet" href="style.css" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
   </head>
   <body>
     <div class="container">
@@ -24,16 +21,14 @@
           <ul>
             <li><a href="index.html">News</a></li>
             <li><a href="#">Recaps</a></li>
-            <li><a href="#">Film Room</a></li>
+            <li><a href="photogallery.html" aria-current="page">Film Room</a></li>
             <li><a href="#">Roster</a></li>
             <li><a href="#">Opinion</a></li>
           </ul>
         </nav>
       </header>
 
-      <!-- Radio-controlled gallery (8 images) -->
-      <section class="radio-gallery">
-        <!-- Radios -->
+      <section class="radio-gallery" aria-label="Photo gallery">
         <input type="radio" name="item" id="photo1" checked="checked" />
         <input type="radio" name="item" id="photo2" />
         <input type="radio" name="item" id="photo3" />
@@ -45,50 +40,50 @@
 
         <h2 class="gallery-title">Photo Gallery</h2>
 
-        <main class="rg-stage" aria-live="polite">
+        <div class="rg-stage">
           <figure>
-            <img src="warriors53.jpeg" alt="Stephen Curry pointing upward after a made three in a blue jersey." />
-            <figcaption>Three up, crowd rising.</figcaption>
+            <img src="warriors61.jpeg" alt="Guard hangs in the air to finish a layup at home." />
+            <figcaption>Drive and finish through contact.</figcaption>
           </figure>
           <figure>
-            <img src="warriors57.jpeg" alt="Stephen Curry raising a golden MVP trophy as fans reach in celebration." />
-            <figcaption>MVP moment in a sea of hands.</figcaption>
+            <img src="warriors65.jpg" alt="Guard celebrating while holding a trophy above a crowd." />
+            <figcaption>Hardware and confetti.</figcaption>
           </figure>
           <figure>
-            <img src="warriors61.jpeg" alt="Curry gliding to the rim for a reverse finish against a shot blocker." />
-            <figcaption>Craft at the rim.</figcaption>
+            <img src="warriors70.jpeg" alt="Ball-handler turns the corner with a defender trailing." />
+            <figcaption>Turning the corner off the drag screen.</figcaption>
           </figure>
           <figure>
-            <img src="warriors63.jpeg" alt="Curry attacking downhill with a defender on his hip." />
-            <figcaption>Downhill with pace.</figcaption>
+            <img src="warriors71.jpeg" alt="Four teammates cut out on white background in shooting motion." />
+            <figcaption>Shooters everywhere.</figcaption>
           </figure>
           <figure>
-            <img src="warriors65.jpg" alt="Curry in a white jersey pointing teammates into position." />
-            <figcaption>Call the action.</figcaption>
+            <img src="warriors72.jpeg" alt="Guard taps his chest toward the crowd after a bucket." />
+            <figcaption>Energy to the crowd.</figcaption>
           </figure>
           <figure>
-            <img src="warriors70.jpeg" alt="Young Curry bringing the ball up in a blue jersey." />
-            <figcaption>Early days in blue and gold.</figcaption>
+            <img src="warriors53.jpeg" alt="Guard in blue pointing skyward after a three." />
+            <figcaption>Point to the sky.</figcaption>
           </figure>
           <figure>
-            <img src="warriors71.jpeg" alt="Teammates lifting a championship trophy amid confetti." />
-            <figcaption>Blue-and-gold hardware.</figcaption>
+            <img src="warriors78.jpeg" alt="Young guard surveys the floor in a blue jersey." />
+            <figcaption>Reading the floor.</figcaption>
           </figure>
           <figure>
-            <img src="warriors79.jpeg" alt="Curry in a dark City Edition jersey saluting the crowd." />
-            <figcaption>Heart for the Bay.</figcaption>
+            <img src="warriors79.jpeg" alt="Teammates lift the championship trophy together." />
+            <figcaption>Together to the top.</figcaption>
           </figure>
-        </main>
+        </div>
 
-        <nav class="rg-thumbs" aria-label="Thumbnails">
-          <label for="photo1"><img src="warriors53.jpeg" alt="Stephen Curry pointing after a made three." /></label>
-          <label for="photo2"><img src="warriors57.jpeg" alt="Stephen Curry raising an MVP trophy among fans." /></label>
-          <label for="photo3"><img src="warriors61.jpeg" alt="Curry finishing a reverse layup." /></label>
-          <label for="photo4"><img src="warriors63.jpeg" alt="Curry driving hard to the rim." /></label>
-          <label for="photo5"><img src="warriors65.jpg" alt="Curry directing a set in a white jersey." /></label>
-          <label for="photo6"><img src="warriors70.jpeg" alt="Young Curry dribbling up the floor." /></label>
-          <label for="photo7"><img src="warriors71.jpeg" alt="Championship trophy hoisted by teammates." /></label>
-          <label for="photo8"><img src="warriors79.jpeg" alt="Curry saluting the crowd near midcourt." /></label>
+        <nav class="rg-thumbs" aria-label="Gallery thumbnails">
+          <label for="photo1"><img src="warriors61.jpeg" alt="Drive and finish through contact." /></label>
+          <label for="photo2"><img src="warriors65.jpg" alt="Hardware and confetti." /></label>
+          <label for="photo3"><img src="warriors70.jpeg" alt="Turning the corner off the drag screen." /></label>
+          <label for="photo4"><img src="warriors71.jpeg" alt="Shooters everywhere." /></label>
+          <label for="photo5"><img src="warriors72.jpeg" alt="Energy to the crowd." /></label>
+          <label for="photo6"><img src="warriors53.jpeg" alt="Point to the sky." /></label>
+          <label for="photo7"><img src="warriors78.jpeg" alt="Reading the floor." /></label>
+          <label for="photo8"><img src="warriors79.jpeg" alt="Together to the top." /></label>
         </nav>
       </section>
 
